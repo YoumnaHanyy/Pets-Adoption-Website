@@ -1,0 +1,289 @@
+/* Importing Stylish Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f6f3ea, #f3eaff);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #6A0DAD;
+}
+
+/* About Us Section - Professional & Animated */
+.about-us-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    background: linear-gradient(135deg, #fef7e5, #f7edff);
+    border-bottom: 5px solid #6A0DAD;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Soft Floating Animation */
+.about-us-section::before, .about-us-section::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(106, 13, 173, 0.08);
+    border-radius: 50%;
+    animation: floatEffect 6s infinite ease-in-out alternate;
+}
+
+.about-us-section::before {
+    top: 10%;
+    left: 5%;
+}
+
+.about-us-section::after {
+    bottom: 15%;
+    right: 10%;
+}
+
+@keyframes floatEffect {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(15px); }
+}
+
+/* About Us Header - Stylish and Professional */
+.about-us-header {
+    font-size: 3.5em;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    color: #6A0DAD;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    position: relative;
+    opacity: 0;
+    animation: fadeInHeader 1.5s ease-in-out forwards;
+}
+
+/* Underline Effect */
+.about-us-header::after {
+    content: '';
+    width: 80px;
+    height: 5px;
+    background: #6A0DAD;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    border-radius: 3px;
+    animation: lineExpand 1s ease-in-out;
+}
+
+@keyframes fadeInHeader {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lineExpand {
+    from { width: 0; }
+    to { width: 80px; }
+}
+
+/* About Us Paragraph - Creative Font & Smooth Animation */
+.about-us-text {
+    max-width: 600px;
+    font-size: 1.3em;
+    line-height: 1.8;
+    color: #4A4A4A;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    text-align: left;
+    opacity: 0;
+    animation: fadeInText 1.5s ease-in-out forwards 0.5s;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Enhanced Image Styling */
+.about-us-images {
+    display: flex;
+    gap: 20px;
+    animation: fadeInImages 2s ease-in-out;
+}
+
+.about-us-images img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(106, 13, 173, 0.3);
+    transition: transform 0.3s ease-in-out;
+    border: 5px solid white;
+}
+
+.about-us-images img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeInImages {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Welcome Section */
+.welcome-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(106, 13, 173, 0.2);
+}
+
+.welcome-section h2 {
+    font-size: 2.5em;
+    color: #6A0DAD;
+}
+
+.welcome-section p {
+    line-height: 1.8;
+    color: #333;
+    font-size: 1.2em;
+}
+
+.welcome-section ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    font-size: 1.1em;
+}
+
+.welcome-section ul li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 12px;
+    color: #4A4A4A;
+}
+
+.welcome-section ul li i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    color: #6A0DAD;
+}
+
+.team-member-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.team-member-profile img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #6A0DAD;
+    margin-right: 20px;
+}
+
+/* Action Sections */
+.action-sections {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px;
+    text-align: center;
+    background: #f3eaff;
+}
+
+.action-item {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(106, 13, 173, 0.2);
+    transition: transform 0.3s ease-in-out;
+    width: 30%;
+}
+
+.action-item:hover {
+    transform: translateY(-5px);
+}
+
+.action-item img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Services Section */
+.services-section {
+    text-align: center;
+    padding: 50px;
+    background: #f6f3ea;
+}
+
+.services-section h2 {
+    font-size: 2.5em;
+    color: #6A0DAD;
+    margin-bottom: 30px;
+}
+
+.service-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 50px;
+}
+
+.service-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(106, 13, 173, 0.2);
+    text-align: center;
+}
+
+.service-item img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+.service-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.service-images img {
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(106, 13, 173, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #6A0DAD;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 1.1em;
+}

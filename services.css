@@ -1,0 +1,1148 @@
+@import url('navbar.css');
+@import url('https://fonts.cdnfonts.com/css/freshener');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f3ea;
+    overflow-x: hidden; /* Removes horizontal scrollbar */
+    display: flex;
+    flex-direction: column;
+}
+/* Add smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add a slight offset to account for fixed navbar if needed */
+html {
+    scroll-padding-top: 80px; /* Adjust based on your navbar height */
+}
+/* Services Header Section Styles */
+.services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    background-color: #f5d7f4;
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px; /* Adjust based on your navbar height */
+}
+.paw {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('../Pets/paw (2).png') no-repeat center/contain;
+    opacity: 0.8;
+}
+.services-header-content {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.services-title {
+    font-family: "Rubik Spray Paint", system-ui;
+    font-size: 4.5rem;
+    color: #8A2BE2; /* Purple color */
+    margin-bottom: 1rem;
+    position: relative;
+}
+.services-titlee, .services-title {
+    position: relative; /* Enables moving the element */
+}
+
+/* Move the "Our" title */
+.services-titlee {
+    top: -25px; /* Move up */
+    left: 140px; /* Move right */
+    /* You can also try: right, bottom */
+}
+
+/* Move the "Services" title */
+.services-title {
+    top: 20px; /* Move down */
+    left: 300px; /* Move right */
+}
+
+.services-header-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blob-background {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: #8f329a; /* Lavender color */
+    border-radius: 50% 60% 40% 70% / 60% 40% 70% 50%;
+    z-index: 1;
+}
+
+.pets-image {
+    max-width: 90%;
+    position: relative;
+    z-index: 2;
+    top: 32px; /* Move down */
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .services-title {
+        font-size: 3.5rem;
+    }
+    
+    .services-header-image {
+        margin-top: 2rem;
+    }
+    
+    .blob-background {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Pet Categories Section */
+.pet-categories {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.category-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 40px;
+    position: relative;
+    cursor: pointer; /* Add pointer cursor to indicate clickable */
+
+}
+
+.category-item.up {
+    margin-top: -50px;
+}
+
+.category-item.down {
+    margin-top: 50px;
+}
+
+
+
+.category-image {
+    width: 100px;  /* Slightly smaller than outer ring */
+    height: 100px; /* Slightly smaller than outer ring */
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f6f3ea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-name {
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-top: 12px;
+    text-transform: uppercase;
+}
+/* Add these animation keyframes to your CSS */
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Add hover effect to the category items */
+  .category-item .category-outer-ring {
+    transition: transform 0.3s ease;
+  }
+  
+  .category-item:hover .category-outer-ring {
+    animation: bounce 0.8s infinite ease-in-out;
+  }
+  
+  /* Stop animation when not hovering */
+  .category-item .category-outer-ring:not(:hover) {
+    animation: none;
+  }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .categories-container {
+        flex-wrap: wrap;
+    }
+    
+    .category-item {
+        margin: 20px;
+    }
+    
+    .category-item.up, .category-item.down {
+        margin-top: 0;
+    }
+}
+/* Pet Visiting Section Styles */
+.pet-visiting {
+    padding: 3rem 0; /* Reduced from 5rem to 3rem */
+    background-color: #f8f4ff;
+    position: relative;
+    overflow: hidden;
+}
+
+.pet-visiting-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.paws-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paw-left, .paw-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.paw-image {
+    max-width: 90%; /* Slightly reduced size */
+    height: auto;
+    margin: 10px 0; /* Reduced from 15px to 10px */
+}
+
+/* Reduced spacing between paw images */
+.paw-height-1 {
+    margin-top: 30px; /* Reduced from 50px */
+}
+
+.paw-height-2 {
+    margin-top: 20px; /* Reduced from 30px */
+}
+
+.paw-height-3 {
+    margin-top: 15px; /* Reduced from 20px */
+}
+
+.paw-height-4 {
+    margin-top: 35px; /* Reduced from 60px */
+}
+
+.visiting-content {
+    width: 50%;
+    text-align: center;
+    padding: 1.5rem; /* Reduced from 2rem */
+}
+
+.visiting-content h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem; /* Reduced from 3rem */
+    color: #8A2BE2;
+    margin-bottom: 1rem; /* Reduced from 1.5rem */
+}
+
+.visiting-content p {
+    color: #444;
+    font-size: 1rem; /* Slightly reduced */
+    line-height: 1.5;
+    margin-bottom: 1.5rem; /* Reduced from 2rem */
+}
+
+.visit-button {
+    display: inline-block;
+    padding: 10px 24px; /* Slightly reduced */
+    background-color: #8f329a;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.visit-button:hover {
+    background-color: #7a2984;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(143, 50, 154, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pet-visiting {
+        padding: 2rem 0; /* Even more reduced for mobile */
+    }
+    
+    .paws-container {
+        flex-direction: column;
+    }
+    
+    .paw-left, .paw-right {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .visiting-content {
+        width: 100%;
+        order: -1;
+        padding: 1rem; /* Further reduced for mobile */
+    }
+    
+    .paw-image {
+        width: 40%;
+        max-width: 80px; /* Reduced from 100px */
+    }
+    
+    /* Reset margins for mobile */
+    .paw-height-1, .paw-height-2, .paw-height-3, .paw-height-4 {
+        margin-top: 10px; /* Reduced from 15px */
+    }
+}
+
+/* Modal Styles - Add to your services.css file */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #fff 0%, #f5d7f4 100%);
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(143, 50, 154, 0.3);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #8A2BE2;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-modal:hover {
+    color: #7a2984;
+}
+
+.modal h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #8A2BE2;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d8b6e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #8f329a;
+    box-shadow: 0 0 8px rgba(143, 50, 154, 0.3);
+}
+
+/* Checkbox styling */
+.checkbox-container, .radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+}
+
+.checkbox-container input, .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark, .radio-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #fff;
+    border: 2px solid #d8b6e0;
+    transition: all 0.2s;
+}
+
+.checkmark {
+    border-radius: 5px;
+}
+
+.radio-checkmark {
+    border-radius: 50%;
+}
+
+.checkbox-container:hover input ~ .checkmark,
+.radio-container:hover input ~ .radio-checkmark {
+    background-color: #f5e8f8;
+}
+
+.checkbox-container input:checked ~ .checkmark,
+.radio-container input:checked ~ .radio-checkmark {
+    background-color: #8A2BE2;
+    border-color: #8A2BE2;
+}
+
+.checkmark:after, .radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after,
+.radio-container input:checked ~ .radio-checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.radio-container .radio-checkmark:after {
+    left: 7px;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.submit-group {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.submit-button {
+    padding: 12px 35px;
+    background-color: #8f329a;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #7a2984;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(143, 50, 154, 0.3);
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    height: 20px;
+}
+
+.form-message.success {
+    color: #28a745;
+}
+
+.form-message.error {
+    color: #dc3545;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        padding: 20px;
+        width: 85%;
+    }
+    
+    .modal h2 {
+        font-size: 1.8rem;
+    }
+    
+    .submit-button {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* Pet Adoption Section Styles */
+.pet-adoption {
+    padding: 3rem 0;
+    background-color: #f8f4ff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.pet-adoption-container {
+    max-width: 1200px;
+    height: 350px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adoption-content {
+    width: 50%;
+    padding: 1.5rem;
+}
+
+.adoption-content h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #8A2BE2;
+    margin-bottom: 1rem;
+}
+
+.adoption-content p {
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: #ff6b6b;
+}
+
+/* Add this specific styling for the adoption description */
+.adoption-description {
+    color: #444;
+    font-size: 0.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-weight: normal !important; /* Using !important to override any other rules */
+}
+.adoption-button {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #8f329a;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem; /* Add this line to create space above the button */
+
+}
+
+.adoption-button:hover {
+    background-color: #a43ab0;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+.adoption-image {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kitten-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pet-adoption-container {
+        flex-direction: column-reverse;
+    }
+    
+    .adoption-content, .adoption-image {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .adoption-image {
+        margin-bottom: 1.5rem;
+    }
+    
+    .kitten-image {
+        max-width: 80%;
+    }
+}
+
+/* Veterinary Care Section Styles */
+.pet-veterinary {
+    padding: 5rem 0;
+    background-color: #f8f4ff;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.veterinary-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #8A2BE2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.veterinary-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 4rem;
+}
+
+.consultation-steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: relative;
+    padding-top: 20px;
+}
+
+/* Add the curved connecting line */
+.connecting-line {
+    position: absolute;
+    top: 50px;
+    left: 15%;
+    width: 70%;
+    height: 2px;
+    z-index: 1;
+    background: none;
+    /* Create a curved line with CSS */
+    border-top: 2px solid #e0e0e0;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.step-item {
+    flex: 1;
+    min-width: 160px;
+    padding: 0 15px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.icon-image {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    filter: invert(26%) sepia(71%) saturate(2177%) hue-rotate(272deg) brightness(87%) contrast(92%);
+}
+
+.step-title {
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.step-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .consultation-steps {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .step-item {
+        flex-basis: calc(50% - 40px);
+        margin-bottom: 30px;
+    }
+    
+    /* Hide the connecting line on mobile */
+    .connecting-line {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .step-item {
+        flex-basis: 100%;
+    }
+    
+    .veterinary-title {
+        font-size: 2rem;
+    }
+}
+/* Pet Grooming Section that replicates Image 1 */
+.pet-grooming {
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.grooming-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dog-image {
+    width: 25%;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.dog-image.left {
+    background-color: #b3cbb3; /* Light green background */
+}
+
+.dog-image.right {
+    background-color: #a378a3; /* Purple background */
+}
+
+.dog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grooming-content {
+    width: 45%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.grooming-content h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.8rem;
+    color: #86588b;
+    margin-bottom: 2rem;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.try-free-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #e0a2fb; /* Yellow circle */
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.tag {
+    padding: 6px 12px;
+    background-color: #e9e9e9;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.tag-highlight {
+    background-color: #fbc2eb; /* Yellow background */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grooming-container {
+        flex-direction: column;
+    }
+    
+    .dog-image {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+    
+    .dog-image.right {
+        margin-top: 2rem;
+        order: 3;
+    }
+    
+    .grooming-content {
+        width: 100%;
+        order: 2;
+    }
+}
+
+/* Pet Rescuing Section Styles */
+.pet-rescuing {
+    padding: 4rem 0;
+    background-color: #f5e8f4; /* Light beige background similar to the image */
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.rescuing-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title-container {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #86588b;
+    margin-bottom: 1rem;
+    font-family: 'Dancing Script', cursive; 
+   text-align: center;
+}
+
+.rescuing-icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.icon-box {
+    flex: 1;
+    min-width: 200px;
+    background-color: #fff;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rescuing-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.icon-box h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.icon-box p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.read-more {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #86588b; /* Orangeish color for the links */
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #69326f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .rescuing-icons {
+        justify-content: center;
+    }
+    
+    .icon-box {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .icon-box {
+        flex-basis: 100%;
+    }
+    
+    .section-main-title {
+        font-size: 2rem;
+    }
+}
+
+/* Pet Donation Section Styles - Much Shorter Height */
+.pet-donation {
+    padding: 0.01rem 0; /* Drastically reduced from original 1rem */
+    background-color: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+    margin-top: 0.1rem;
+}
+
+.donation-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+}
+
+.donation-image {
+    width: 40%; /* Keeping the increased width for bigger dog image */
+    display: flex;
+    justify-content: flex-end;
+    /* Reducing height by constraining the image container */
+    max-height: 500px; /* Added explicit height constraint */
+    overflow: hidden;
+}
+
+.donation-image img {
+    width: 110%; 
+    max-width: 550px;
+    height: auto;
+    display: block;
+}
+
+.donation-content {
+    width: 45%;
+    padding-left: 10px;
+    /* Reducing height by condensing content */
+    max-height: 270px; /* Added explicit height constraint */
+}
+
+.donation-content h2 {
+    font-size: 1.7rem; /* Reduced from 2rem */
+    color: #333;
+    font-weight: 400;
+    margin-bottom: 0.5rem; /* Further reduced */
+    line-height: 1.2; /* Tightened line height */
+}
+
+.bank-label {
+    font-size: 0.8rem; /* Reduced */
+    color: #666;
+    margin-bottom: 0.2rem; /* Minimal margin */
+}
+
+.bank-info {
+    display: flex;
+    align-items: center;
+    background-color: #f1ccf4;
+    padding: 6px 12px; /* Reduced padding */
+    border-radius: 8px;
+    margin-bottom: 0.5rem; /* Further reduced */
+    width: fit-content;
+}
+
+.bank-info i {
+    margin-right: 8px;
+    color: #666;
+}
+
+.bank-info span {
+    font-size: 0.9rem; /* Reduced */
+    letter-spacing: 0.5px; /* Reduced */
+    color: #333;
+}
+
+.donation-note {
+    font-size: 0.75rem; /* Smaller text */
+    color: #999;
+    line-height: 1.2; /* Much tighter line spacing */
+    max-width: 450px;
+    max-height: 60px; /* Constrain height */
+    overflow-y: auto; /* Add scrolling if needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .pet-donation {
+        padding: 0.1rem 0; /* Even less padding on mobile */
+    }
+    
+    .donation-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .donation-image {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem; /* Minimal margin */
+        max-height: 200px; /* Even shorter on mobile */
+    }
+    
+    .donation-content {
+        width: 100%;
+        padding-left: 0;
+        max-height: none; /* Remove height constraint on mobile */
+    }
+    
+    .bank-info {
+        margin: 0 auto 0.5rem;
+    }
+    
+    .donation-note {
+        margin: 0 auto;
+        max-height: 50px; /* Shorter on mobile */
+    }
+}

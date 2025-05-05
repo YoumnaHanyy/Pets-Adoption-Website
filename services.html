@@ -1,0 +1,386 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Foster</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="NavBar.css">
+    <link rel="stylesheet" href="Homepage.css">
+    <script src="../pets/NavBar.js"></script>
+    <script src="services.js"></script>
+    <script src="Homepage.js"></script>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Matemasie&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/freshener" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Caveat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="navbar"></div>
+<script>
+    fetch("NavBar.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("navbar").innerHTML = data);
+</script>
+
+<!-- Services Header Section -->
+<section class="services-header">
+    <div class="services-header-content">
+        <h1 class="services-titlee">Our</h1>
+        <h1 class="services-title">Services</h1>
+        
+    </div>
+    <div class="services-header-image">
+        <div class="blob-background"></div>
+        <img src="../pets/image.png" alt="Cat and Dog" class="pets-image">
+    </div>
+</section>
+
+<!-- Services Categories Section -->
+<section class="pet-categories">
+    <div class="categories-container">
+        <div class="category-item up">
+            <div class="category-outer-ring">
+                <div class="category-image">
+                    <img src="../pets/pet-care.png" alt="Pet volunteering">
+                </div>
+            </div>
+            <p class="category-name">Volunteering</p>
+        </div>
+        
+
+
+        <div class="category-item down">
+            <div class="category-outer-ring">
+                <div class="category-image">
+                    <img src="../pets/veterinary.png" alt="Pet veterinary">
+                </div>
+            </div>
+            <p class="category-name">Veterinary care</p>
+        </div>
+        
+        <div class="category-item up">
+            <div class="category-outer-ring">
+                <div class="category-image">
+                    <img src="../pets/icon-volunteer.png" alt="Pet Adoption">
+                </div>
+            </div>
+            <p class="category-name">Adoption</p>
+        </div>
+        
+        <div class="category-item down">
+            <div class="category-outer-ring">
+                <div class="category-image">
+                    <img src="../pets/pet-grooming.png" alt="Pet Grooming">
+                </div>
+            </div>
+            <p class="category-name">Grooming</p>
+        </div>
+        
+        <div class="category-item up">
+            <div class="category-outer-ring">
+                <div class="category-image">
+                    <img src="../pets/pet-visit.png" alt="Volunteering">
+                </div>
+            </div>
+            <p class="category-name">Rescuing</p>
+        </div>
+    </div>
+</section>
+<!-- Pet Visiting Section -->
+<section class="pet-visiting">
+    <div class="pet-visiting-container">
+        <div class="paws-container">
+            <div class="paw-left">
+                <img src="../Pets/paw (4).png" alt="Paw Print" class="paw-image paw-height-1">
+                <img src="../Pets/paw (5).png" alt="Paw Print" class="paw-image paw-height-2">
+            </div>
+            
+            <div class="visiting-content">
+                <h2>Volunteering</h2>
+                <p>Our Pet Volunteering Service invites animal lovers to visit our adoption center and spend quality time with our furry friends. Whether it’s playing, cuddling, or helping with feeding, your time and love make a world of difference — bringing joy to the animals while they wait for their forever homes. Come share the love and make some new paw-some friends! </p>
+                <a href="#" class="visit-button">Schedule a Visit</a>
+            </div>
+            
+            <div class="paw-right">
+                <img src="../Pets/paw (3).png" alt="Paw Print" class="paw-image paw-height-3">
+                <img src="../Pets/paw (6).png" alt="Paw Print" class="paw-image paw-height-4">
+            </div>
+        </div>
+    </div>
+
+<div id="visitModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Schedule Your Visit</h2>
+        <form id="visitForm">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="18" max="120" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="visitDate">Visit Date</label>
+                <input type="date" id="visitDate" name="visitDate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="visitTime">Visit Time</label>
+                <input type="time" id="visitTime" name="visitTime" required>
+            </div>
+            
+            <div class="form-group checkbox-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="hasExperience" name="hasExperience">
+                    <span class="checkmark"></span>
+                    I have experience with animals
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label>I would like to visit:</label>
+                <div class="radio-options">
+                    <label class="radio-container">
+                        <input type="radio" name="petType" value="dogs" required>
+                        <span class="radio-checkmark"></span>
+                        Dogs
+                    </label>
+                    <label class="radio-container">
+                        <input type="radio" name="petType" value="cats">
+                        <span class="radio-checkmark"></span>
+                        Cats
+                    </label>
+                    <label class="radio-container">
+                        <input type="radio" name="petType" value="both">
+                        <span class="radio-checkmark"></span>
+                        Both
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group submit-group">
+                <button type="submit" class="submit-button">Schedule Visit</button>
+            </div>
+            
+            <div id="formMessage" class="form-message"></div>
+        </form>
+    </div>
+</div>
+
+<!-- Veterinary Section -->
+<section class="pet-veterinary">
+    <div class="veterinary-container">
+        <h2 class="section-title">Veterinary Care</h2>
+        <p class="section-subtitle">Give your little friends the care they need</p>
+        
+        <div class="consultation-steps">
+            <!-- Curved connecting lines -->
+            <div class="connecting-line"></div>
+            
+            <div class="step-item">
+                <div class="step-icon">
+                    <img src="../Pets/chat.png" alt="Get in touch" class="icon-image">
+                </div>
+                <h3 class="step-title">Get in touch</h3>
+                <p class="step-description">Reach out to learn more about our veterinary services.</p>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-icon">
+                    <img src="../Pets/calendar.png" alt="Schedule a visit" class="icon-image">
+                </div>
+                <h3 class="step-title">Schedule a visit</h3>
+                <p class="step-description">Book a time to bring your pet in for care.</p>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-icon">
+                    <img src="../Pets/to-do-list.png" alt="Pet admission" class="icon-image">
+                </div>
+                <h3 class="step-title">Pet admission</h3>
+                <p class="step-description">Check your pet in for treatment or observation.</p>
+            </div>
+            
+            <div class="step-item">
+                <div class="step-icon">
+                    <img src="../Pets/home.png" alt="Take them home" class="icon-image">
+                </div>
+                <h3 class="step-title">Take them home</h3>
+                <p class="step-description">Bring your happy, healthy pet back home!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pet Adoption Section -->
+<section class="pet-adoption">
+    <div class="pet-adoption-container">
+        <div class="adoption-content">
+            <h2>Adoption</h2>
+            <p>Hi Human. You need <span class="highlight">Friends</span>?</p>
+            <p class="adoption-description">Try to adopt some pet. We will help you to choose and to pick the best pet for you. We recommend you to adopt rather than buy it.</p>
+            <a href="#" class="adoption-button">Step 1: Choose a Pet</a>
+        </div>
+        <div class="adoption-image">
+            <img src="../Pets/adopt-cat.png" alt="Cute Kitten" class="kitten-image">
+        </div>
+    </div>
+</section>
+
+<!-- Pet Rescuing Section -->
+<section class="pet-rescuing">
+    <div class="section-title-container">
+        <h2 class="section-main-title">We're here for them</h2>
+    </div>
+    <div class="rescuing-container">
+        <div class="rescuing-icons">
+            
+            <div class="icon-box">
+                <img src="../pets/call.png" alt="Help Icon" class="rescuing-icon">
+                <h3>Hotline</h3>
+                <p>Provide immediate assistance to animals in dangerous situations.</p>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+            
+            <div class="icon-box">
+                <img src="../pets/pets.png" alt="Dog Icon" class="rescuing-icon">
+                <h3>Admission</h3>
+                <p>Create a safe environment and transport to our facility.</p>
+                <a href="#" class="read-more">Read about rescuing</a>
+            </div>
+            
+            <div class="icon-box">
+                <img src="../pets/pawprint.png" alt="Paw Icon" class="rescuing-icon">
+                <h3>Rehabilitation</h3>
+                <p>Post-rescue rehabilitation and specialized care.</p>
+                <a href="#" class="read-more">Read how we can help</a>
+            </div>
+            
+            <div class="icon-box">
+                <img src="../pets/pet-love.png" alt="Care Icon" class="rescuing-icon">
+                <h3>Adoption</h3>
+                <p>Legal assistance and finding permanent homes.</p>
+                <a href="#" class="read-more">Find how to adopt</a>
+            </div>
+        </div>
+        
+       
+    </div>
+</section>
+
+<!-- Pet Grooming Section -->
+<section class="pet-grooming">
+    <div class="grooming-container">
+        <div class="dog-image left">
+            <img src="../pets/cat-shower.png" alt="Happy dog">
+        </div>
+        
+        <div class="grooming-content">
+            <h2>Grooming</h2>
+            
+            <a href="#" class="try-free-button">
+Schedule your appointment                <span class="arrow-icon">➔</span>
+            </a>
+            
+            <div class="service-tags">
+                <span class="tag tag-highlight">unique</span>
+                <span class="tag">Haircut</span>
+                <span class="tag tag-highlight">Shower</span>
+                <span class="tag">socialization</span>
+                <span class="tag tag-highlight">personalized</span>
+                <span class="tag">safety</span>
+                <span class="tag tag-highlight">friendly</span>
+                <span class="tag">Nailcare</span>
+                <span class="tag">comfort</span>
+            </div>
+        </div>
+        
+        <div class="dog-image right">
+            <img src="../pets/dog-shower.jpg" alt="Beagle dog">
+        </div>
+    </div>
+</section>
+
+<!-- Pet Donation Section -->
+<section class="pet-donation">
+    <div class="donation-container">
+        <div class="donation-image">
+            <img src="../pets/goldendog.png" alt="Golden Retriever Puppy">
+        </div>
+        <div class="donation-content">
+            <h2>In addition, you<br>can make a donation</h2>
+            <p class="bank-label">Name of the bank / Type of bank account</p>
+            <div class="bank-info">
+                <i class="fas fa-credit-card"></i>
+                <span>5350 2880 6028 8791 7435</span>
+            </div>
+            <p class="donation-note">Legal information and terms about date of your reservation, refunding and finalizing a place for Foster together, payment and so forth. Financial officer monitors every individual donation in forecasts. Write us any your concern! Donation.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3 class="footer-logo">Pet Foster</h3>
+                <p>Follow us on our social Media Platforms and help make a difference.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Volunteering</a></li>
+                    <li><a href="#">Pet Grooming</a></li>
+                    <li><a href="#">Pet Veterinary</a></li>
+                    <li><a href="#">Pet Adoption</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Utility Pages</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Pets</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Anywhere street, Cairo, Egypt</p>
+                    <p><i class="fas fa-envelope"></i> petfoster@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 989 569 8520</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>©2025 — PetFoster</p>
+            <div class="footer-links">
+                <a href="#">Faq</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

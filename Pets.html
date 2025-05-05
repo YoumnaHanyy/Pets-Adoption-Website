@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Homepage.css">
+    <link rel="stylesheet" href="NavBar.css">
+    <link rel="stylesheet" href="pets.css">
+    <link href="https://fonts.cdnfonts.com/css/freshener" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Caveat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <div id="navbar"></div>
+<script>
+    fetch("NavBar.html")
+        .then(response => response.text())
+        .then(data => document.getElementById("navbar").innerHTML = data);
+</script>
+
+<section class="adoption">
+   
+    <div class="content">
+        <h1>Your New Adopted Friend Delivered to Your Home</h1>
+        <p>Our online pet store helps you find a new friend with just a few clicks. Act now!</p>
+        <button class="adopt-btn">See Friends</button>
+    </div>
+    <div class="background-circle">
+    <div class="PET">
+        <img src="../Pets/WWW.jpg" class="imgpet">
+    </div>
+
+
+</section>
+<div class="carousel-container">
+
+    <div class="carousel" id="carousel">
+        <div class="card">
+            <img src="../Pets/dogs.webp" alt="Dog">
+            <h3 style="color: red;">Dogs →</h3>
+        </div>
+        <div class="card">
+            <img src="../Pets/bird.jpg" alt="Bird">
+            <h3 style="color: green;">Birds →</h3>
+        </div>
+        <div class="card">
+            <img src="../Pets/cat.jpg" alt="Cat">
+            <h3 style="color: blue;">Cats →</h3>
+        </div>
+        <div class="card">
+            <img src="../Pets/monkey.jpg" alt="Fish">
+            <h3 style="color: orange;">Monkey →</h3>
+        </div>
+    </div>
+   
+</div>
+
+
+<section class="lost-pet-section">
+    <div class="contentt">
+      <h2>Lost or found a pet?</h2>
+      <p>Call <strong>425.787.2500 x800</strong></p>
+      <p>Submit a lost or found report and view additional resources.</p>
+      <a href="#" class="help-link">GET HELP</a>
+    </div>
+  </section>
+  
+<section class="pets-deals">
+    <h2 class="deals-title">Pet Adoption | Meet Your friends</h2>
+    <div class="pets-container">
+        <div class="pet-category">
+            <img src="../Pets/cat-home.jpg" alt="Dogs">
+            <p>Dogs</p>
+        </div>
+        <div class="pet-category">
+            <img src="../Pets/cat.jpg" alt="Cats">
+            <p>Cats</p>
+        </div>
+        <div class="pet-category">
+            <img src="../Pets/bird.jpg" alt="Birds">
+            <p>Birds</p>
+        </div>
+        <div class="pet-category">
+            <img src="../Pets/rabbit.webp" alt="Rabbits">
+            <p>Rabbits</p>
+        </div>
+        <div class="pet-category">
+            <img src="../Pets/monkey.jpg" alt="Monkeys">
+            <p>Monkeys</p>
+        </div>
+        <div class="pet-category">
+            <img src="../Pets/parrot.jpg" alt="Fish">
+            <p>Parrots</p>
+        </div>
+    </div>
+   
+</section>
+<section class="adoption-deals">
+
+    <h2>Available Cats</h3>
+    <div class="adoption-container">
+        
+        <div class="adoption-card">
+            
+            <img src="../Pets/cat-home.jpg" alt="Adopt a Cat">
+            <div class="card-content">
+                <h3>Luna</h3>
+                <p class="pet-info">Female / Persian Cat</p>
+                <p class="age">1 year old</p>
+                <p class="location">📍 Cat City</p>
+                <button class="adopt-btn" onclick="redirectToPage()">Adopt Now</button>
+            </div>
+        </div>
+        <div class="adoption-card">
+            <img src="../Pets/cat-home2.webp" alt="Adopt a Bunny">
+            <div class="card-content">
+                <h3>Fluffy</h3>
+                <p class="pet-info">Male / Holland Lop</p>
+                <p class="age">6 months old</p>
+                <p class="location">📍 Bunny Haven</p>
+                <button class="adopt-btn">Adopt Now</button>
+            </div>
+        </div>
+        <div class="adoption-card">
+            <img src="../Pets/cat-home3.jpg" alt="Adopt a Parrot">
+            <div class="card-content">
+                <h3>Rio</h3>
+                <p class="pet-info">Male / Macaw Parrot</p>
+                <p class="age">3 years old</p>
+                <p class="location">📍 Bird Sanctuary</p>
+                <button class="adopt-btn">Adopt Now</button>
+            </div>
+        </div>
+        
+
+    </div>
+
+
+    <div class="adoption-container">
+        <div class="adoption-card">
+            <img src="../Pets/cat-home4.jpg" alt="Adopt a Cat">
+            <div class="card-content">
+                <h3>Luna</h3>
+                <p class="pet-info">Female / Persian Cat</p>
+                <p class="age">1 year old</p>
+                <p class="location">📍 Cat City</p>
+                <button class="adopt-btn" onclick="redirectToPage()">Adopt Now</button>
+            </div>
+        </div>
+        <div class="adoption-card">
+            <img src="../Pets/caaat.jpg" alt="Adopt a Bunny">
+            <div class="card-content">
+                <h3>Fluffy</h3>
+                <p class="pet-info">Male / Holland Lop</p>
+                <p class="age">6 months old</p>
+                <p class="location">📍 Bunny Haven</p>
+                <button class="adopt-btn">Adopt Now</button>
+            </div>
+        </div>
+        <div class="adoption-card">
+            <img src="../Pets/ffff.jpg" alt="Adopt a Parrot">
+            <div class="card-content">
+                <h3>Rio</h3>
+                <p class="pet-info">Male / Macaw Parrot</p>
+                <p class="age">3 years old</p>
+                <p class="location">📍 Bird Sanctuary</p>
+                <button class="adopt-btn">Adopt Now</button>
+            </div>
+        </div>
+    </div>
+    <button class="outline-btn">VIEW ALL CATS</button>
+
+
+
+
+
+
+
+
+
+    <h2>Available Dogs</h3>
+        <div class="adoption-container">
+        
+            <div class="adoption-card">
+                
+                <img src="../Pets/dog-home.jpg" alt="Adopt a Cat">
+                <div class="card-content">
+                    <h3>Luna</h3>
+                    <p class="pet-info">Female / Persian Cat</p>
+                    <p class="age">1 year old</p>
+                    <p class="location">📍 Cat City</p>
+                    <button class="adopt-btn" onclick="redirectToPage()">Adopt Now</button>
+                </div>
+            </div>
+            <div class="adoption-card">
+                <img src="../Pets/dog-home1.jpg" alt="Adopt a Bunny">
+                <div class="card-content">
+                    <h3>Fluffy</h3>
+                    <p class="pet-info">Male / Holland Lop</p>
+                    <p class="age">6 months old</p>
+                    <p class="location">📍 Bunny Haven</p>
+                    <button class="adopt-btn">Adopt Now</button>
+                </div>
+            </div>
+            <div class="adoption-card">
+                <img src="../Pets/dog-home2.jpg" alt="Adopt a Parrot">
+                <div class="card-content">
+                    <h3>Rio</h3>
+                    <p class="pet-info">Male / Macaw Parrot</p>
+                    <p class="age">3 years old</p>
+                    <p class="location">📍 Bird Sanctuary</p>
+                    <button class="adopt-btn">Adopt Now</button>
+                </div>
+            </div>
+            
+    
+        </div>
+       
+    
+    
+    
+        <div class="adoption-container">
+            <div class="adoption-card">
+                <img src="../Pets/dog-home3.jpg" alt="Adopt a Cat">
+                <div class="card-content">
+                    <h3>Luna</h3>
+                    <p class="pet-info">Female / Persian Cat</p>
+                    <p class="age">1 year old</p>
+                    <p class="location">📍 Cat City</p>
+                    <button class="adopt-btn" onclick="redirectToPage()">Adopt Now</button>
+                </div>
+            </div>
+            <div class="adoption-card">
+                <img src="../Pets/dog-home4.webp" alt="Adopt a Bunny">
+                <div class="card-content">
+                    <h3>Fluffy</h3>
+                    <p class="pet-info">Male / Holland Lop</p>
+                    <p class="age">6 months old</p>
+                    <p class="location">📍 Bunny Haven</p>
+                    <button class="adopt-btn">Adopt Now</button>
+                </div>
+            </div>
+            <div class="adoption-card">
+                <img src="../Pets/dog-home5.jpg" alt="Adopt a Parrot">
+                <div class="card-content">
+                    <h3>Rio</h3>
+                    <p class="pet-info">Male / Macaw Parrot</p>
+                    <p class="age">3 years old</p>
+                    <p class="location">📍 Bird Sanctuary</p>
+                    <button class="adopt-btn">Adopt Now</button>
+                </div>
+            </div>
+        </div>
+        <button class="outline-btn">VIEW ALL DOGS</button>
+</section>
+
+<section class="adoption-info">
+    <h2>Looking to adopt?</h2>
+    <div class="info-container">
+        <div class="info-box">
+            <div class="info-header"></div>
+            <h3>Cat or dog catch your eye?</h3>
+            <p>If you found a cat or dog listed on the website who you’d like to meet, get started here. Please note there is a high demand for adoptable animals at PAWS so you will want to get started right away.</p>
+            <a href="#">GET STARTED</a>
+        </div>
+        <div class="info-box">
+            <div class="info-header"></div>
+            <h3>Want to adopt but not seeing a match?</h3>
+            <p>If you’re looking to adopt but not yet seeing an animal on the website you’d like to meet, here are some resources to help you in your journey to finding a match.</p>
+            <a href="#">LEARN MORE</a>
+        </div>
+    </div>
+</section>
+
+
+<section class="shelter-section">
+    <div class="shelter-overlay">
+        <h2>Our Shelters</h2>
+        <p>
+            PAWS has companion animal adoption centers in Lynnwood<br> and Seattle.
+            Find out more about PAWS Companion <br>Animal Shelter in Lynnwood and
+            PAWS <br>Cat City in Seattle.
+        </p>
+        <a href="#" class="shelter-link">Learn More</a>
+    </div>
+</section>
+
+<section class="adoption-info">
+    <h2 class="h">After you adopt</h2>
+    <p class="parag">Thank you for adopting your new cat or dog from PAWS and giving a homeless animal a second chance!<br> If you need advice or guidance along the way or simply want to let us know how your <br>new companion is settling in, we are here for you.</h4>
+    <div class="info-container">
+        <div class="info-box">
+            <div class="info-header"></div>
+            <h3>Keep in touch</h3>
+            <p>Paws wants to keep in touch so we can help you bond with your new companion.</p>
+            <a href="#">LEARN MORE</a>
+        </div>
+        <div class="info-box">
+            <div class="info-header"></div>
+            <h3>Learn more about our shelters.</h3>
+            <p>If you’re looking to adopt but not yet seeing an animal on the website you’d like to meet, here are some resources to help you in your journey to finding a match.</p>
+            <a href="#">LEARN MORE</a>
+        </div>
+    </div>
+</section>
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3 class="footer-logo">Pet Foster</h3>
+                <p>Follow us on our social Media Platforms and help make a difference.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Dog Pet Visit</a></li>
+                    <li><a href="#">Cat Pet Visit</a></li>
+                    <li><a href="#">Pet Grooming</a></li>
+                    <li><a href="#">Pet Veterinary</a></li>
+                    <li><a href="#">Pet Adoption</a></li>
+                    <li><a href="#">Volunteering</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Utility Pages</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Pets</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Anywhere street, Cairo, Egypt</p>
+                    <p><i class="fas fa-envelope"></i> petfoster@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 989 569 8520</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>©2025 — PetFoster</p>
+            <div class="footer-links">
+                <a href="#">Fa==q</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="pets.js"></script>
+</body>
+</html>

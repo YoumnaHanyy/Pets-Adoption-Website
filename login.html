@@ -37,7 +37,7 @@
         </select>
        
         </select>
-        <button type="submit">Sign Up</button>
+        <button type="submit" onclick="HomePage.html">Sign Up</button>
       </form>
     </div>
 
@@ -45,14 +45,15 @@
 
 
     <div class="form-container sign-in">
-      <form>
+      <form id="signInForm">
         <h1>Sign In</h1>
         <span>or use your email and password</span>
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
+        <input type="email" id="signInEmail" placeholder="Email" required />
+        <input type="password" id="signInPassword" placeholder="Password" required />
         <a href="forgetpass.html">Forgot Your Password?</a>
         <button type="submit">Sign In</button>
       </form>
+      
     </div>
     <div class="toggle-container">
       <div class="toggle">
@@ -70,6 +71,25 @@
     </div>
   </div>
   <script src="login.js"></script>
+  <script>
+    document.getElementById("signInForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Stop the default form submission
+
+    // Get user input values
+    let email = document.getElementById("signInEmail").value;
+    let password = document.getElementById("signInPassword").value;
+
+    // Simple validation
+    if (email && password) {
+        // Simulate authentication process
+        
+        window.location.href = "Homepage.html"; // Redirect to homepage
+    } else {
+        
+    }
+});
+
+  </script>
 </body>
 
 </html>

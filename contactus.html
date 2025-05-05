@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="NavBar.css">
+  <title>Contact Us</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: #6A0DAD;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+    }
+
+    /* Hero Section - Enhanced Creativity */
+    .hero-section {
+      position: relative;
+      padding: 100px 10%;
+      background: linear-gradient(135deg, #fef7e5, #f7edff);
+      border-bottom: 5px solid #6A0DAD;
+      overflow: hidden;
+    }
+    /* Floating Circles Animation */
+    .hero-section::before,
+    .hero-section::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: rgba(106, 13, 173, 0.08);
+      border-radius: 50%;
+      animation: floatEffect 6s infinite ease-in-out alternate;
+    }
+    .hero-section::before {
+      top: 10%;
+      left: 5%;
+    }
+    .hero-section::after {
+      bottom: 15%;
+      right: 10%;
+    }
+    @keyframes floatEffect {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(20px); }
+    }
+    .hero-text-container {
+      max-width: 600px;
+      text-align: left;
+      position: relative;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-text-container h1 {
+      font-size: 4em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .hero-text-container h1::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 80px;
+      height: 5px;
+      background: #6A0DAD;
+      animation: lineExpand 1s ease-in-out;
+    }
+    @keyframes lineExpand {
+      from { width: 0; }
+      to { width: 80px; }
+    }
+    .hero-text-container p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+    .cta-button {
+      background: #6A0DAD;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      background: #50258d;
+      transform: scale(1.05);
+    }
+
+    /* Enlarged Wrapper */
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      margin: 0 auto;
+      max-width: 1200px;
+      min-height: 80vh;
+      background: #f7f7f7;
+    }
+    /* Modern Container for Inquiry Section */
+    .modern-container {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      background: #fff;
+      padding: 40px;
+      transition: transform 0.3s ease;
+    }
+    .modern-container:hover {
+      transform: scale(1.01);
+    }
+    /* Accordion Styles */
+    .accordion-content details {
+      background: #c2a2fb;
+      margin: 10px 0;
+      border-radius: 5px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      transition: background 0.3s ease;
+    }
+    .accordion-content details:hover {
+      background: #b499f2;
+    }
+    .accordion-content summary {
+      font-weight: bold;
+      cursor: pointer;
+      outline: none;
+    }
+    /* Contact Button */
+    .contact-button {
+      background: #6339b7;
+      border: none;
+      color: #fff;
+      padding: 16px 50px;
+      font-size: 18px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      width: 100%;
+      margin-top: 20px;
+    }
+    .contact-button:hover {
+      background: #3d00b7;
+    }
+    /* Modal - Overlapping Contact Form Container */
+    .contact-form-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 600px;
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      display: none;
+    }
+    /* Close Button for the Modal */
+    .close-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #333;
+    }
+    /* Form Group Styles */
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    /* Submit Button Styles */
+    .submit-button {
+      background: #6339b7;
+      border: none;
+      color: #fff;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .submit-button:hover {
+      background: #3d00b7;
+    }
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 80px 5%;
+      }
+      .hero-text-container h1 {
+        font-size: 3em;
+      }
+      .hero-text-container p {
+        font-size: 1em;
+      }
+      .modern-container {
+        max-width: 90%;
+        padding: 20px;
+      }
+      .contact-button {
+        padding: 16px 20px;
+        font-size: 18px;
+      }
+      .contact-form-container {
+        width: 95%;
+        padding: 20px;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-text-container h1 {
+        font-size: 2.5em;
+      }
+      .hero-text-container p {
+        font-size: 0.9em;
+      }
+      .contact-button {
+        font-size: 16px;
+        padding: 12px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+      
+    <div id="navbar"></div>
+    <script>
+        fetch("NavBar.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-text-container">
+      <h1>Contact Us</h1>
+      <p>
+        If you have any questions or need further information, we're here to help.
+        Reach out to us and we'll get back to you promptly.
+      </p>
+      <a class="cta-button" href="tel:01016670800">Call Us Now</a>
+    </div>
+  </section>
+
+  <!-- Main Content Wrapper -->
+  <div class="wrapper">
+    <div class="modern-container">
+      <section class="inquiry-section">
+        <div class="accordion-content">
+          <details>
+            <summary>ARE YOU LOOKING FOR A NEW PET?</summary>
+            <p>
+              Our platform hosts a large, searchable database of pets in need of adoption from thousands of shelters and rescue groups.
+              Start your search now.
+            </p>
+          </details>
+          <details>
+            <summary>ARE YOU A SHELTER/PLACEMENT GROUP THAT NEEDS ASSISTANCE?</summary>
+            <p>
+              We’re dedicated to supporting shelters that list their pets on our site.
+              Contact our shelter support team for guidance.
+            </p>
+          </details>
+          <details>
+            <summary>DO YOU WANT MORE INFORMATION ABOUT A PET YOU'VE SEEN?</summary>
+            <p>
+              Contact the shelter responsible for the pet for detailed info on availability and adoption requirements.
+            </p>
+          </details>
+          <details>
+            <summary>ARE YOU TRYING TO FIND A HOME FOR A PET?</summary>
+            <p>
+              Check out our guide on “Finding a Home for a Pet” and contact local shelters for additional support.
+            </p>
+          </details>
+          <details>
+            <summary>DO YOU NEED MORE INFORMATION ON ADOPTION POLICIES?</summary>
+            <p>
+              Adoption policies vary among organizations.
+              Contact the shelter for specific details on fees and requirements.
+            </p>
+          </details>
+          <details>
+            <summary>ARE YOU HAVING TROUBLE ENTERING YOUR LOCATION?</summary>
+            <p>
+              Ensure you are entering a valid ZIP or postal code. If issues persist, try clearing your cache or cookies.
+            </p>
+          </details>
+          <details>
+            <summary>WOULD YOU LIKE TO LINK TO OUR SITE?</summary>
+            <p>
+              We offer embeddable widgets to showcase adoptable pets on your site.
+              Contact us for more information.
+            </p>
+          </details>
+          <details>
+            <summary>DO YOU HAVE CONCERNS REGARDING A PET'S HEALTH OR SAFETY?</summary>
+            <p>
+              Contact the shelter or rescue group immediately for any health or safety concerns regarding a pet.
+            </p>
+          </details>
+        </div>
+
+        <!-- Contact Button -->
+        <div class="contact-wrapper">
+          <button class="contact-button" onclick="toggleContactForm()">Contact Us</button>
+        </div>
+
+        <!-- Modal: Contact Form -->
+        <div id="contactFormContainer" class="contact-form-container">
+          <button class="close-button" onclick="toggleContactForm()">&#10005;</button>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name<span style="color:red">*</span>:</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email<span style="color:red">*</span>:</label>
+              <input type="email" id="email" name="email" placeholder="Your email address" required />
+            </div>
+            <div class="form-group">
+              <label for="inquiryType">Purpose of Inquiry<span style="color:red">*</span>:</label>
+              <select id="inquiryType" name="inquiryType" required>
+                <option value="">Select an option</option>
+                <option value="new-pet">Looking for a new pet</option>
+                <option value="shelter-assistance">Shelter/Placement Assistance</option>
+                <option value="pet-info">More Info on a Pet</option>
+                <option value="rehome">Finding a Home for a Pet</option>
+                <option value="adoption-policy">Adoption Policy</option>
+                <option value="location-issues">Location Entry Issues</option>
+                <option value="linking">Linking to Our Site</option>
+                <option value="health-concern">Health/Safety Concern</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject<span style="color:red">*</span>:</label>
+              <input type="text" id="subject" name="subject" placeholder="Subject of your message" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message<span style="color:red">*</span>:</label>
+              <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    // Toggle the visibility of the contact form modal
+    function toggleContactForm() {
+      const container = document.getElementById('contactFormContainer');
+      container.style.display = container.style.display === "block" ? "none" : "block";
+    }
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert('Your message has been sent!');
+      event.target.reset();
+      toggleContactForm();
+    });
+  
+    // JavaScript for active link
+    function setActiveLink() {
+        const navLinks = document.querySelectorAll('nav ul li a');
+        const currentPage = window.location.pathname.split('/').pop();
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    }
+
+    window.onload = function() {
+        setActiveLink();
+    };
+</script>
+</body>
+
+</html>

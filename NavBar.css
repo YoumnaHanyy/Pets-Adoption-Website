@@ -3,7 +3,7 @@ header {
     background: #f6f3ea;
     display: flex;
     position: fixed;
-    z-index: 9999999999;
+    z-index:9999999999999999999999999999999999999 ;
     justify-content: space-between;
     align-items: center;
     width: 95%;
@@ -40,12 +40,21 @@ nav ul li {
     display: inline;
 }
 
+/* Default link style */
 nav ul li a {
     text-decoration: none;
     color: black;
-    font-size: 16px;
-    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s;
 }
+
+/* Active link style */
+nav ul li a.active {
+    color: white;
+    background-color: #ff5733;
+    border-radius: 5px;
+}
+
 
 .LoginSignup-btn {
     background: #7a50b6;
