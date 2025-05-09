@@ -227,7 +227,7 @@
             <h2>Adoption</h2>
             <p>Hi Human. You need <span class="highlight">Friends</span>?</p>
             <p class="adoption-description">Try to adopt some pet. We will help you to choose and to pick the best pet for you. We recommend you to adopt rather than buy it.</p>
-            <a href="#" class="adoption-button">Step 1: Choose a Pet</a>
+            <a href="Pets.html" class="adoption-button">Step 1: Choose a Pet</a>
         </div>
         <div class="adoption-image">
             <img src="../Pets/adopt-cat.png" alt="Cute Kitten" class="kitten-image">
@@ -305,6 +305,153 @@ Schedule your appointment                <span class="arrow-icon">➔</span>
         
         <div class="dog-image right">
             <img src="../pets/dog-shower.jpg" alt="Beagle dog">
+        </div>
+    </div>
+    <!-- The Grooming Booking Modal -->
+    <div id="groomingModal" class="grooming-modal">
+        <div class="grooming-modal-content">
+            <!-- Decorative paw prints -->
+            <div class="paw-decoration paw-top-left"></div>
+            <div class="paw-decoration paw-bottom-right"></div>
+            
+            <span class="close-grooming-modal">&times;</span>
+            <h2>Book Grooming Service</h2>
+            
+            <form id="groomingForm">
+                <!-- Pet information section -->
+                <div class="grooming-form-group">
+                    <label>Pet Type</label>
+                    <div class="pet-type-options">
+                        <div class="pet-type-option">
+                            <input type="radio" id="petDog" name="petType" value="dog" required>
+                            <label for="petDog">
+                                <img src="../pets/dog.png" alt="Dog">
+                                <span>Dog</span>
+                            </label>
+                        </div>
+                        <div class="pet-type-option">
+                            <input type="radio" id="petCat" name="petType" value="cat">
+                            <label for="petCat">
+                                <img src="../Pets/cat.png" alt="Cat">
+                                <span>Cat</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grooming-form-group">
+                    <label for="petName">Pet's Name</label>
+                    <input type="text" id="petName" name="petName" required>
+                </div>
+                
+                <div class="grooming-form-row">
+                    <div class="grooming-form-col">
+                        <div class="grooming-form-group">
+                            <label for="petBreed">Pet's Breed</label>
+                            <input type="text" id="petBreed" name="petBreed" required>
+                        </div>
+                    </div>
+                    <div class="grooming-form-col">
+                        <div class="grooming-form-group">
+                            <label for="petAge">Pet's Age (Years)</label>
+                            <input type="number" id="petAge" name="petAge" min="0" step="0.1" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Services section -->
+                <div class="grooming-form-group">
+                    <label>Select Services</label>
+                    <div class="service-options">
+                        <div class="service-option">
+                            <input type="checkbox" id="serviceBath" name="services[]" value="bath">
+                            <label for="serviceBath">
+                                <span class="service-name">Bath & Brush</span>
+                                <span class="service-price">$25+</span>
+                            </label>
+                        </div>
+                        <div class="service-option">
+                            <input type="checkbox" id="serviceHaircut" name="services[]" value="haircut">
+                            <label for="serviceHaircut">
+                                <span class="service-name">Haircut</span>
+                                <span class="service-price">$35+</span>
+                            </label>
+                        </div>
+                        <div class="service-option">
+                            <input type="checkbox" id="serviceNails" name="services[]" value="nails">
+                            <label for="serviceNails">
+                                <span class="service-name">Nail Trim</span>
+                                <span class="service-price">$15</span>
+                            </label>
+                        </div>
+                        <div class="service-option">
+                            <input type="checkbox" id="serviceEars" name="services[]" value="ears">
+                            <label for="serviceEars">
+                                <span class="service-name">Ear Cleaning</span>
+                                <span class="service-price">$10</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Appointment details -->
+                <div class="grooming-form-row">
+                    <div class="grooming-form-col">
+                        <div class="grooming-form-group">
+                            <label for="appointmentDate">Preferred Date</label>
+                            <input type="date" id="appointmentDate" name="appointmentDate" required>
+                        </div>
+                    </div>
+                    <div class="grooming-form-col">
+                        <div class="grooming-form-group">
+                            <label for="appointmentTime">Preferred Time</label>
+                            <select id="appointmentTime" name="appointmentTime" required>
+                                <option value="">Select a time</option>
+                                <option value="9:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Owner information -->
+                <div class="grooming-form-group">
+                    <label for="ownerName">Your Name</label>
+                    <input type="text" id="ownerName" name="ownerName" required>
+                </div>
+                
+                <div class="grooming-form-row">
+                    <div class="grooming-form-col">
+                        <div class="grooming-form-group">
+                            <label for="ownerEmail">Email</label>
+                            <input type="email" id="ownerEmail" name="ownerEmail" required>
+                        </div>
+                    </div>
+                    <div class="grooming-form-col">
+                        <div class="grooming-form-group">
+                            <label for="ownerPhone">Phone</label>
+                            <input type="tel" id="ownerPhone" name="ownerPhone" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grooming-form-group">
+                    <label for="specialInstructions">Special Instructions</label>
+                    <textarea id="specialInstructions" name="specialInstructions" rows="3"></textarea>
+                </div>
+                
+                <div class="grooming-submit-group">
+                    <button type="submit" class="grooming-submit-button">Book Appointment</button>
+                </div>
+                
+                <div id="groomingFormMessage" class="grooming-form-message"></div>
+            </form>
         </div>
     </div>
 </section>

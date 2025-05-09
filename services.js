@@ -203,3 +203,144 @@ document.addEventListener("DOMContentLoaded", function() {
        
     });
 });
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the modal elements
+    const groomingModal = document.getElementById("groomingModal");
+    const groomingButton = document.querySelector(".try-free-button");
+    const closeGroomingModal = document.querySelector(".close-grooming-modal");
+    const groomingForm = document.getElementById("groomingForm");
+    const groomingFormMessage = document.getElementById("groomingFormMessage");
+    
+    // Set minimum date to today
+    const appointmentDateInput = document.getElementById("appointmentDate");
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    const todayFormatted = `${yyyy}-${mm}-${dd}`;
+    appointmentDateInput.min = todayFormatted;
+    
+    // Open modal when the grooming button is clicked
+    if (groomingButton) {
+        groomingButton.addEventListener("click", function(e) {
+            e.preventDefault();
+            groomingModal.classList.add("show");
+            document.body.style.overflow = "hidden"; // Prevent scrolling when modal is open
+        });
+    }
+    
+    // Close modal when X is clicked
+    closeGroomingModal.addEventListener("click", function() {
+        closeGroomingModalFunction();
+    });
+    
+    // Close modal when clicking outside the modal content
+    window.addEventListener("click", function(event) {
+        if (event.target === groomingModal) {
+            closeGroomingModalFunction();
+        }
+    });
+    
+    // Close modal when Escape key is pressed
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape" && groomingModal.classList.contains("show")) {
+            closeGroomingModalFunction();
+        }
+    });
+    
+    // Function to close modal
+    function closeGroomingModalFunction() {
+        groomingModal.classList.remove("show");
+        setTimeout(() => {
+            document.body.style.overflow = ""; // Re-enable scrolling
+        }, 300); // Wait for animation to complete
+    }
+    
+    // Form validation
+    function validateForm() {
+        // Reset error message
+        groomingFormMessage.textContent = "";
+        groomingFormMessage.className = "grooming-form-message";
+        
+        // Basic validation
+        const petType = document.querySelector('input[name="petType"]:checked');
+        const petName = document.getElementById("petName").value.trim();
+        const petBreed = document.getElementById("petBreed").value.trim();
+        const petAge = document.getElementById("petAge").value;
+        const services = document.querySelectorAll('input[name="services[]"]:checked');
+        const appointmentDate = document.getElementById("appointmentDate").value;
+        const appointmentTime = document.getElementById("appointmentTime").value;
+        const ownerName = document.getElementById("ownerName").value.trim();
+        const ownerEmail = document.getElementById("ownerEmail").value.trim();
+        const ownerPhone = document.getElementById("ownerPhone").value.trim();
+        
+        // Check required fields
+        if (!petType || !petName || !petBreed || !petAge || services.length === 0 || 
+            !appointmentDate || !appointmentTime || !ownerName || !ownerEmail || !ownerPhone) {
+            groomingFormMessage.textContent = "Please fill in all required fields and select at least one service.";
+            groomingFormMessage.className = "grooming-form-message error";
+            return false;
+        }
+        
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(ownerEmail)) {
+            groomingFormMessage.textContent = "Please enter a valid email address.";
+            groomingFormMessage.className = "grooming-form-message error";
+            return false;
+        }
+        
+        // Validate phone number (simple validation)
+        const phoneRegex = /^\d{10,15}$/;
+        if (!phoneRegex.test(ownerPhone.replace(/[^0-9]/g, ''))) {
+            groomingFormMessage.textContent = "Please enter a valid phone number.";
+            groomingFormMessage.className = "grooming-form-message error";
+            return false;
+        }
+        
+        return true;
+    }
+    
+    // Form submission
+    groomingForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        if (!validateForm()) {
+            return;
+        }
+        
+        // Collect selected services
+        const selectedServices = Array.from(document.querySelectorAll('input[name="services[]"]:checked'))
+            .map(checkbox => checkbox.value);
+        
+        // Create booking data object
+        const bookingData = {
+            petType: document.querySelector('input[name="petType"]:checked').value,
+            petName: document.getElementById("petName").value.trim(),
+            petBreed: document.getElementById("petBreed").value.trim(),
+            petAge: document.getElementById("petAge").value,
+            services: selectedServices,
+            appointmentDate: document.getElementById("appointmentDate").value,
+            appointmentTime: document.getElementById("appointmentTime").value,
+            ownerName: document.getElementById("ownerName").value.trim(),
+            ownerEmail: document.getElementById("ownerEmail").value.trim(),
+            ownerPhone: document.getElementById("ownerPhone").value.trim(),
+            specialInstructions: document.getElementById("specialInstructions").value.trim()
+        };
+        
+        // Log booking data (would be sent to server in a real implementation)
+        console.log("Grooming Booking:", bookingData);
+        
+        // Show success message
+        groomingFormMessage.textContent = "Your grooming appointment has been scheduled! We'll contact you to confirm.";
+        groomingFormMessage.className = "grooming-form-message success";
+        
+        // Reset form after 3 seconds and close modal
+        setTimeout(() => {
+            groomingForm.reset();
+            groomingFormMessage.textContent = "";
+            groomingFormMessage.className = "grooming-form-message";
+            closeGroomingModalFunction();
+        }, 3000);
+    });
+});

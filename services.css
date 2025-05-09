@@ -1146,3 +1146,302 @@ html {
         max-height: 50px; /* Shorter on mobile */
     }
 }
+/* Modal Styles */
+.grooming-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grooming-modal.show {
+    display: block;
+    opacity: 1;
+}
+
+.grooming-modal-content {
+    background: linear-gradient(135deg, #fff 0%, #f5d7f4 100%);
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(143, 50, 154, 0.3);
+    width: 90%;
+    max-width: 550px;
+    position: relative;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.grooming-modal.show .grooming-modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.close-grooming-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: #8A2BE2;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-grooming-modal:hover {
+    color: #7a2984;
+}
+
+.grooming-modal h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #8A2BE2;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+.grooming-form-group {
+    margin-bottom: 20px;
+}
+
+.grooming-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+.grooming-form-group input,
+.grooming-form-group select,
+.grooming-form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d8b6e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.grooming-form-group input:focus,
+.grooming-form-group select:focus,
+.grooming-form-group textarea:focus {
+    outline: none;
+    border-color: #8f329a;
+    box-shadow: 0 0 8px rgba(143, 50, 154, 0.3);
+}
+
+.grooming-form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.grooming-form-col {
+    flex: 1;
+    padding: 0 10px;
+    min-width: 200px;
+}
+
+/* Service options section */
+.service-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.service-option {
+    position: relative;
+    width: calc(50% - 6px);
+}
+
+.service-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.service-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 15px 10px;
+    background-color: #fff;
+    border: 2px solid #d8b6e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: 80px;
+}
+
+.service-option input:checked + label {
+    background-color: #f5d7f4;
+    border-color: #8f329a;
+}
+
+.service-option label span {
+    display: block;
+}
+
+.service-option label .service-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #8A2BE2;
+}
+
+.service-option label .service-price {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Pet type radio buttons */
+.pet-type-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.pet-type-option {
+    position: relative;
+    flex: 1;
+}
+
+.pet-type-option input {
+    position: absolute;
+    opacity: 0;
+}
+
+.pet-type-option label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border: 2px solid #d8b6e0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pet-type-option input:checked + label {
+    background-color: #f5d7f4;
+    border-color: #8f329a;
+}
+
+.pet-type-option label img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+/* Paw print decoration */
+.paw-decoration {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('../Pets/paw (2).png') no-repeat center/contain;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.paw-top-left {
+    top: 20px;
+    left: 20px;
+    transform: rotate(-30deg);
+}
+
+.paw-bottom-right {
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(30deg);
+}
+
+/* Submit button */
+.grooming-submit-group {
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.grooming-submit-button {
+    padding: 12px 35px;
+    background-color: #8f329a;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.grooming-submit-button:hover {
+    background-color: #7a2984;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(143, 50, 154, 0.3);
+}
+
+.grooming-form-message {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+    height: 20px;
+}
+
+.grooming-form-message.success {
+    color: #28a745;
+}
+
+.grooming-form-message.error {
+    color: #dc3545;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .grooming-modal-content {
+        margin: 10% auto;
+        padding: 20px;
+        width: 85%;
+    }
+    
+    .grooming-modal h2 {
+        font-size: 1.8rem;
+    }
+    
+    .service-option,
+    .pet-type-option {
+        width: 100%;
+    }
+    
+    .service-options {
+        flex-direction: column;
+    }
+    
+    .pet-type-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .grooming-form-row {
+        flex-direction: column;
+    }
+    
+    .grooming-submit-button {
+        padding: 10px 30px;
+        font-size: 1rem;
+        width: 100%;
+    }
+}

@@ -81,3 +81,45 @@ nav ul li a.active:hover {
     backdrop-filter: blur(10px); /* Blur effect */
     transition: all 0.3s ease-in-out;
 }
+
+
+/* Button container for proper alignment */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Existing login button styling */
+.LoginSignup-btn {
+    background: #7a50b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* New profile button styling */
+.profile-btn {
+    background: #7a50b6;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-btn:hover {
+    background: #9063cd;
+    transform: scale(1.05);
+}
+
+.profile-btn i {
+    font-size: 20px;
+}

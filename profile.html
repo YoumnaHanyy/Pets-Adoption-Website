@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetFoster - User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="NavBar.css">
+    <link rel="stylesheet" href="Homepage.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <script>
+        fetch("NavBar.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+    </script>
+
+    <div class="main-container">
+        <!-- Main Content -->
+        <div class="profile-container">
+            <div class="profile-header">
+                <h1>My Profile</h1>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" placeholder="I'm looking for...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <button class="notifications"><i class="fas fa-bell"></i></button>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <!-- Profile Card -->
+                <section class="profile-card">
+                    <div class="profile-header-content">
+                        <div class="profile-image">
+                            <img src="../Pets/user (1).png" alt="Emma Thompson">
+                        </div>
+                        <div class="profile-info">
+                            <h2>Sarah Thompson <button class="edit-btn"><i class="fas fa-edit"></i></button></h2>
+                            <div class="profile-details">
+                                <p><span>Registration date:</span> November 24, 2022</p>
+                                <p><span>Location:</span> Cairo, Egypt</p>
+                                <p><span>Date of birth:</span> April 8, 2000</p>
+                                <p><span>Email:</span> sarah.thompson@email.com</p>
+                                <p><span>Phone:</span> +1 (503) 265-3625</p>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="google"><i class="fab fa-google"></i></a>
+                                <a href="#" class="vk"><i class="fab fa-vk"></i></a>
+                                <a href="#" class="telegram"><i class="fab fa-telegram-plane"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Stats -->
+                <section class="quick-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-paw"></i>
+                        <div class="stat-info">
+                            <h3>My Pets</h3>
+                            <span>2</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-heart"></i>
+                        <div class="stat-info">
+                            <h3>Favorites</h3>
+                            <span>0</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div class="stat-info">
+                            <h3>Reminders</h3>
+                            <span>2</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-comment"></i>
+                        <div class="stat-info">
+                            <h3>Messages</h3>
+                            <span>1</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Payment Info -->
+                <section class="payment-info">
+                    <h2>Payment Information</h2>
+                    <div class="card-info">
+                        <p>Card number:</p>
+                        <div class="card-number">236 •••• •••• 265</div>
+                    </div>
+                    <div class="payment-methods">
+                        <img src="../Pets/fawry.png" alt="Fawry">
+                        <img src="../Pets/Apple_Pay_logo.svg.png" alt="Apple Pay">
+                        <img src="../Pets/MasterCard_Logo.svg.png" alt="Mastercard">
+                        <img src="../Pets/Visa_Inc._logo.svg.png" alt="Visa">
+                    </div>
+                </section>
+
+                <!-- My Pets -->
+                <section class="my-pets">
+                    <h2>Courses History</h2>
+
+                    <div class="pet-progress">
+                        <div class="pet-course completed">
+                            <div class="course-dot"></div>
+                            <div class="course-content">
+                                <div class="course-info">
+                                    <h3>Basic Dog Training</h3>
+                                    <p>Obedience, commands, and leash manners</p>
+                                    <p>6 sessions</p>
+                                </div>
+                                <div class="course-status">
+                                    <span class="status-completed">Completed</span>
+                                    <button class="view-btn"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pet-course completed">
+                            <div class="course-dot"></div>
+                            <div class="course-content">
+                                <div class="course-info">
+                                    <h3>Pet Nutrition Basics</h3>
+                                    <p>Healthy meal planning for your pet</p>
+                                    <p>4 sessions</p>
+                                </div>
+                                <div class="course-status">
+                                    <span class="status-completed">Completed</span>
+                                    <button class="view-btn"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pet-course in-progress">
+                            <div class="course-dot"></div>
+                            <div class="course-content">
+                                <div class="course-info">
+                                    <h3>Advanced Tricks Training</h3>
+                                    <p>Fun tricks and interactive games</p>
+                                    <p>5 sessions</p>
+                                </div>
+                                <div class="course-status">
+                                    <span class="status-started">Started: 06/13/2023</span>
+                                    <button class="view-btn"><i class="fas fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Subscription -->
+                <section class="subscription">
+                    <div class="subscription-content">
+                        <h2>Premium Pet Parent Membership</h2>
+                        <ul>
+                            <li>1 month Premium free</li>
+                            <li>2 months free for students and seniors</li>
+                            <li>Cancel anytime</li>
+                            <li>Exclusive discounts and special offers monthly</li>
+                        </ul>
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3 class="footer-logo">Pet Foster</h3>
+                <p>Follow us on our social Media Platforms and help make a difference.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Volunteering</a></li>
+                    <li><a href="#">Pet Grooming</a></li>
+                    <li><a href="#">Pet Veterinary</a></li>
+                    <li><a href="#">Pet Adoption</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Utility Pages</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Pets</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Anywhere street, Cairo, Egypt</p>
+                    <p><i class="fas fa-envelope"></i> petfoster@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 989 569 8520</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>©2025 — PetFoster</p>
+            <div class="footer-links">
+                <a href="#">Faq</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="profile.js"></script>
+    <script src="NavBar.js"></script>
+    <script src="Homepage.js"></script>
+
+</body>
+</html>
