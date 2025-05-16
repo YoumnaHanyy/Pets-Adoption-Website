@@ -1,9 +1,10 @@
 
+
 header {
     background: #f6f3ea;
     display: flex;
     position: fixed;
-    z-index:9999999999999999999999999999999999999 ;
+    z-index: 9999999999;
     justify-content: space-between;
     align-items: center;
     width: 95%;
@@ -40,21 +41,12 @@ nav ul li {
     display: inline;
 }
 
-/* Default link style */
 nav ul li a {
     text-decoration: none;
     color: black;
-    padding: 10px;
-    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
 }
-
-/* Active link style */
-nav ul li a.active {
-    color: white;
-    background-color: #ff5733;
-    border-radius: 5px;
-}
-
 
 .LoginSignup-btn {
     background: #7a50b6;
@@ -89,4 +81,46 @@ nav ul li a.active:hover {
     background: rgba(246, 243, 234, 0.7); /* Transparent */
     backdrop-filter: blur(10px); /* Blur effect */
     transition: all 0.3s ease-in-out;
+}
+
+
+/* Button container for proper alignment */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Existing login button styling */
+.LoginSignup-btn {
+    background: #7a50b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* New profile button styling */
+.profile-btn {
+    background: #7a50b6;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-btn:hover {
+    background: #9063cd;
+    transform: scale(1.05);
+}
+
+.profile-btn i {
+    font-size: 20px;
 }

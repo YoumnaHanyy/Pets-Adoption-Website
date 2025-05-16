@@ -1,0 +1,275 @@
+<!-- cats.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Cats Available for Adoption</title>
+    <link rel="stylesheet" href="cats.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <section >
+<header>
+    <nav>
+        <div class="logo">Pet <br><span class="highlight">foster</span></div>
+        <img src="../pets/paw.png" class="footprint">
+        <ul>
+            <li><a href="Homepage.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="Pets.html">Pets</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+        </ul>
+        <button class="LoginSignup-btn" onclick="window.location.href='login.html'">Login/Signup</button>
+    </nav>
+</header>
+    
+   
+</section>
+
+   
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="age">Age</label>
+                    <select id="age" name="age">
+                        <option value="">Any</option>
+                        <option value="kitten">Kitten (0-1 year)</option>
+                        <option value="young">Young (1-3 years)</option>
+                        <option value="adult">Adult (3-8 years)</option>
+                        <option value="senior">Senior (8+ years)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="">Any</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="breed">Breed</label>
+                    <select id="breed" name="breed">
+                        <option value="">Any</option>
+                        <option value="persian">Persian</option>
+                        <option value="siamese">Siamese</option>
+                        <option value="bengal">Bengal</option>
+                        <option value="ragdoll">Ragdoll</option>
+                        <option value="mainecoon">Maine Coon</option>
+                        <option value="mixed">Mixed</option>
+                    </select>
+                </div>
+                <button class="filter-btn">Apply Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="all-pets-section">
+        <div class="container">
+            <div class="pets-grid">
+                <!-- Cat 1 -->
+                <div class="pet-card">
+                    <div class="pet-card-badge">New</div>
+                    <img src="/ProjectManagement/pets/cat-home.jpg" alt="Luna">
+                    <div class="pet-card-content">
+                        <h3>Luna</h3>
+                        <p class="pet-info">Female / Persian Cat</p>
+                        <p class="age">1 year old</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Cat City</p>
+                        <a href="#" class="adoptt-btn">Adopt Now</a>
+                    </div>
+                </div>
+                
+                <!-- Cat 2 -->
+                <div class="pet-card">
+                    <img src="/ProjectManagement/pets/cat-home2.webp" alt="Fluffy">
+                    <div class="pet-card-content">
+                        <h3>Fluffy</h3>
+                        <p class="pet-info">Male / Holland Lop</p>
+                        <p class="age">6 months old</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Bunny Haven</p>
+                        <a href="#" class="adoptt-btn">Adopt Now</a>
+                    </div>
+                </div>
+                
+                <!-- Cat 3 -->
+                <div class="pet-card">
+                    <img src="/ProjectManagement/pets/cat-home3.jpg" alt="Rio">
+                    <div class="pet-card-content">
+                        <h3>Rio</h3>
+                        <p class="pet-info">Male / Macaw Parrot</p>
+                        <p class="age">3 years old</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Bird Sanctuary</p>
+                        <a href="#" class="adoptt-btn">Adopt Now</a>
+                    </div>
+                </div>
+                
+                <!-- Cat 4 -->
+                <div class="pet-card">
+                    <img src="/ProjectManagement/pets/cat5.jpg" alt="Luna">
+                    <div class="pet-card-content">
+                        <h3>Oreo</h3>
+                        <p class="pet-info">Female / Domestic Shorthair</p>
+                        <p class="age">2 years old</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Cat City</p>
+                        <a href="#" class="adoptt-btn">Adopt Now</a>
+                    </div>
+                </div>
+                
+                <!-- Cat 5 -->
+                <div class="pet-card">
+                    <div class="pet-card-badge special">Special Needs</div>
+                    <img src="/ProjectManagement/pets/cat6.jpg" alt="Fluffy">
+                    <div class="pet-card-content">
+                        <h3>Mittens</h3>
+                        <p class="pet-info">Female / Calico</p>
+                        <p class="age">4 years old</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Cat Haven</p>
+                        <a href="#" class="adoptt-btn">Adopt Now</a>
+                    </div>
+                </div>
+                
+                <!-- Cat 6 -->
+                <div class="pet-card">
+                    <img src="/ProjectManagement/pets/cat7.jpg" alt="Rio">
+                    <div class="pet-card-content">
+                        <h3>Shadow</h3>
+                        <p class="pet-info">Male / Bombay</p>
+                        <p class="age">1 year old</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Cat Sanctuary</p>
+                        <a href="#" class="adoptt-btn">Adopt Now</a>
+                    </div>
+                </div>
+                
+                <!-- Add more cat cards as needed -->
+                <!-- Cat 7 -->
+                <div class="pet-card">
+                    <img src="/ProjectManagement/pets/cat8.jpg" alt="Whiskers">
+                    <div class="pet-card-content">
+                        <h3>Whiskers</h3>
+                        <p class="pet-info">Male / Siamese</p>
+                        <p class="age">3 years old</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Cat City</p>
+                        <a href="#" class="adoptt-btn">Adopt Now</a>
+                    </div>
+                </div>
+                
+                <!-- Cat 8 -->
+                <div class="pet-card">
+                    <div class="pet-card-badge">Vaccinated</div>
+                    <img src="/ProjectManagement/pets/cat9.png" alt="Milo">
+                    <div class="pet-card-content">
+                        <h3>Milo</h3>
+                        <p class="pet-info">Male / Bengal</p>
+                        <p class="age">1 year old</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Cat Haven</p>
+                        <a href="#" class="adoptt-btn">Adopt Now</a>
+                    </div>
+                </div>
+                
+                <!-- Cat 9 -->
+                <div class="pet-card">
+                    <img src="/ProjectManagement/pets/ffff.jpg" alt="Nala">
+                    <div class="pet-card-content">
+                        <h3>Nala</h3>
+                        <p class="pet-info">Female / Maine Coon</p>
+                        <p class="age">5 years old</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> Cat Sanctuary</p>
+                        <a href="#" class="adoptt-btn">Adopt Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <span>...</span>
+                <a href="#">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-adoption">
+        <div class="container">
+            <h2>Can't find what you're looking for?</h2>
+            <p>New cats become available for adoption every day. Sign up for alerts to be notified when new cats matching your preferences are added.</p>
+            <form class="alert-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn-primary">Sign Up for Alerts</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <div class="footer-logo">PetAdopt</div>
+                    <p>Finding loving homes for pets in need since 2010. We believe every pet deserves a caring home.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="cats.html">Available Cats</a></li>
+                        <li><a href="dogs.html">Available Dogs</a></li>
+                        <li><a href="#">Adoption Process</a></li>
+                        <li><a href="#">Pet Care Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Pet Care Tips</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Adoption Street, Pet City</p>
+                        <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                        <p><i class="fas fa-envelope"></i> info@petadopt.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetAdopt. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // JavaScript for filter functionality would go here
+        document.querySelector('.filter-btn').addEventListener('click', function() {
+            // Filter logic would go here
+            alert('Filters applied! This would filter the cats based on your selections.');
+        });
+    </script>
+    <script src="petss.js"></script>
+</body>
+</html>

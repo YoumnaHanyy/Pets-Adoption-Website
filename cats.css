@@ -1,0 +1,587 @@
+/* cats.css - Styling for PetAdopt website */
+
+/* General Styles */
+:root {
+   
+    --secondary-color: #FF6B6B;
+    --tertiary-color: #50C878;
+    --dark-color: #ffffff;
+    --light-color: #F8F9FA;
+    --grey-color: #E9ECEF;
+    --text-color: #212529;
+    --primary-color: #7a50b6;
+    --primary-light: rgba(122, 80, 182, 0.2);
+    --primary-dark: #63409a;
+    --secondary-color: rgb(230, 215, 171);
+    --secondary-light: rgb(240, 231, 204);
+    --background-color: #f6f3ea;
+    --text-color: #333;
+    --text-light: #666;
+    --white: #fff;
+    --black: #000;
+    --gray: #888;
+    --light-gray: #f0f0f0;
+    
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+   
+    background-color: #f6f3ea;
+  }
+  
+  
+header {
+    background: #f6f3ea;
+    display: flex;
+   
+    z-index:9999999999999999999999999999999999999 ;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px 50px;
+   border-bottom:1px solid rgb(210, 210, 210);
+}
+
+.logo {
+    font-size: 24px;
+    
+    font-family: "Rubik Spray Paint", system-ui;
+   
+}
+
+.highlight {
+    color: #7a3af9;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Default link style */
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+/* Active link style */
+nav ul li a.active {
+    color: white;
+    background-color: #ff5733;
+    border-radius: 5px;
+}
+
+
+.LoginSignup-btn {
+    background: #7a50b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    order: 3;
+}
+.footprint{
+    width: 2em;
+    margin-top: -1.5em;
+    margin-left: -1.5em;
+}
+nav ul li a.active {
+    background: #9063cd;  /* Same color as "Contact us" button */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a.active:hover {
+    background: #7a50b6; /* Darker shade on hover */
+}
+
+
+.scrolled {
+    background: rgba(246, 243, 234, 0.7); /* Transparent */
+    backdrop-filter: blur(10px); /* Blur effect */
+    transition: all 0.3s ease-in-out;
+}
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: var(--transition);
+  }
+  
+
+  
+
+
+  /* Filter Section */
+  .filter-section {
+    background-color:#f6f3ea;
+    padding: 20px 0;
+   
+    box-shadow: var(--shadow);
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .filter-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  .filter-group label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .filter-group select {
+    padding: 10px;
+    border: 1px solid var(--grey-color);
+    border-radius: var(--border-radius);
+    background-color: white;
+    font-size: 1rem;
+  }
+  
+  .filter-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    margin-top: 24px;
+    align-self: flex-end;
+  }
+  
+  .filter-btn:hover {
+    background-color: #3578e5;
+  }
+  
+  /* Pets Grid */
+  .all-pets-section {
+    padding: 40px 0;
+  }
+  
+  .pets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+  
+  .pet-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+  }
+  
+  .pet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .pet-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .pet-card-content {
+    padding: 20px;
+  }
+  
+  .pet-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
+  
+  .pet-info {
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .age {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  .location {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+  }
+  
+  .location i {
+    margin-right: 5px;
+  }
+  
+  .adoptt-btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .adoptt-btn:hover {
+    background-color: #ff5252;
+  }
+  
+  .pet-card-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--tertiary-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .pet-card-badge.special {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .pagination a, .pagination span {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    min-width: 40px;
+  }
+  
+  .pagination a {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pagination a:hover {
+    background-color: var(--grey-color);
+  }
+  
+  .pagination a.active {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* CTA Section */
+  .cta-adoption {
+    background-color: rgb(230, 215, 171);
+    padding: 60px 0;
+    text-align: center;
+  }
+  
+  .cta-adoption h2 {
+    margin-bottom: 15px;
+    font-size: 2rem;
+  }
+  
+  .cta-adoption p {
+    margin-bottom: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .alert-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .alert-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--grey-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+  }
+  
+  .btn-primary:hover {
+    background-color: #3578e5;
+  }
+  
+  /* Footer */
+  .footer-section {
+    background-color: var(--dark-color);
+    color: black;
+    padding: 60px 0 20px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #2b2b2b;
+  }
+  
+  .footer-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+  }
+  
+  .footer-column p {
+    opacity: 0.8;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: var(--transition);
+  }
+  
+  .social-icon:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+color: #000;
+  }
+  
+  .footer-column ul li a {
+    opacity: 0.8;
+    color:#000
+  }
+  
+  .footer-column ul li a:hover {
+    opacity: 1;
+    color: var(--primary-color);
+  }
+  
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info i {
+    color: var(--primary-color);
+  }
+  
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+
+  .footer-bottom p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    color: #000;
+  }
+
+  .footer-bottom h3 {
+    color: #000;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-links a {
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+  
+  .footer-links a:hover {
+    opacity: 1;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .mobile-menu-btn {
+      display: flex;
+    }
+  
+    .nav-links {
+      position: absolute;
+      flex-direction: column;
+      background-color: white;
+      width: 100%;
+      left: 0;
+      top: 70px;
+      padding: 20px;
+      gap: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transform: translateY(-150%);
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+  
+    .nav-links.active {
+      transform: translateY(0);
+    }
+  
+    .mobile-menu-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .mobile-menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .mobile-menu-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .filter-btn {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .alert-form {
+      flex-direction: column;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+  
+    .footer-links {
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .page-banner {
+      padding: 40px 0;
+    }
+  
+    .page-banner h1 {
+      font-size: 2rem;
+    }
+  
+    .pets-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .cta-adoption {
+      padding: 40px 0;
+    }
+  
+    .cta-adoption h2 {
+      font-size: 1.8rem;
+    }
+  }
