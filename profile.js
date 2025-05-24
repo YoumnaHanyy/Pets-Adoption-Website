@@ -286,9 +286,9 @@ document.addEventListener('DOMContentLoaded', function() {
             content = `
                 <div class="pet-profile">
                     <div class="pet-profile-header">
-                        <img src="/ProjectManagement/pets/garden.jpg" alt="Oreo" class="pet-banner">
+                        <img src="/pets/garden.jpg" alt="Oreo" class="pet-banner">
                         <div class="pet-avatar">
-                            <img src="/ProjectManagement/pets/oreo.jpg" alt="Oreo">
+                            <img src="/pets/oreo.jpg" alt="Oreo">
                         </div>
                     </div>
                     <div class="pet-profile-info">
@@ -366,9 +366,9 @@ document.addEventListener('DOMContentLoaded', function() {
             content = `
                 <div class="pet-profile">
                     <div class="pet-profile-header">
-                        <img src="/ProjectManagement/pets/block.jpg" alt="Fluffy" class="pet-banner">
+                        <img src="/pets/block.jpg" alt="Fluffy" class="pet-banner">
                         <div class="pet-avatar">
-                            <img src="/ProjectManagement/pets/fluffy.jpg" alt="Fluffy">
+                            <img src="/pets/fluffy.jpg" alt="Fluffy">
                         </div>
                     </div>
                     <div class="pet-profile-info">
@@ -521,7 +521,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <!-- Pet Card 1 -->
                     <div class="pet-card">
                         <div class="pet-image">
-                            <img src="/ProjectManagement/pets/oreo.jpg" alt="Oreo">
+                            <img src="/pets/oreo.jpg" alt="Oreo">
                             <span class="pet-badge dog">Dog</span>
                         </div>
                         <div class="pet-details">
@@ -556,7 +556,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <!-- Pet Card 2 -->
                     <div class="pet-card">
                         <div class="pet-image">
-                            <img src="/ProjectManagement/pets/fluffy.jpg" alt="Fluffy">
+                            <img src="/pets/fluffy.jpg" alt="Fluffy">
                             <span class="pet-badge cat">Cat</span>
                         </div>
                         <div class="pet-details">
@@ -643,7 +643,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                         <h3>No favorites yet</h3>
                         <p>Browse our pet listings and add some favorites to see them here.</p>
-                        <button class="btn-primary">Browse Pets</button>
+                   <button class="btn-primary" onclick="window.location.href='pets.html'">Browse Pets</button>
                     </div>
                 `);
             });
@@ -840,7 +840,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="messages-list">
                         <div class="message-item unread">
                             <div class="message-avatar">
-                                <img src="/api/placeholder/60/60" alt="Dr. Sarah">
+                                <img src="/pets/user (1).png" alt="Dr. Sarah">
                             </div>
                             <div class="message-content">
                                 <div class="message-header">

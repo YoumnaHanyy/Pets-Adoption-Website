@@ -1146,3 +1146,50 @@ html {
         max-height: 50px; /* Shorter on mobile */
     }
 }
+/* Additional styles for grooming modal */
+#groomingModal .modal-content {
+    max-width: 600px;
+}
+
+#groomingModal select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d8b6e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: white;
+    transition: border-color 0.3s;
+}
+
+#groomingModal select:focus {
+    outline: none;
+    border-color: #8f329a;
+    box-shadow: 0 0 8px rgba(143, 50, 154, 0.3);
+}
+
+#groomingModal textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #d8b6e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 80px;
+    transition: border-color 0.3s;
+}
+
+#groomingModal textarea:focus {
+    outline: none;
+    border-color: #8f329a;
+    box-shadow: 0 0 8px rgba(143, 50, 154, 0.3);
+}
+
+/* Make the category name clickable */
+.category-name {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.category-name:hover {
+    color: #8A2BE2;
+}

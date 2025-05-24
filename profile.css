@@ -37,6 +37,8 @@ body {
     font-size: 28px;
     font-weight: 600;
     color: #6B5ECD;
+        font-family: 'Poppins', sans-serif; /* Or your default font */
+
 }
 
 .header-actions {
@@ -1152,13 +1154,6 @@ body {
     opacity: 0.1;
 }
 
-/* Add cute paw cursor */
-.stat-card:first-child,
-.pet-card,
-.btn-primary,
-.btn-outline {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='%236B5ECD' d='M12 16c3.314 0 6-2.686 6-6 0-3.31-2.686-6-6-6s-6 2.69-6 6c0 3.314 2.686 6 6 6zm10-6c0 5.523-4.477 10-10 10S2 15.523 2 10 6.477 0 12 0s10 4.477 10 10z'/></svg>"), pointer;
-}
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -1172,5 +1167,303 @@ body {
     
     .diet-preferences {
         grid-template-columns: 1fr;
+    }
+}
+/* Reminders Modal Styles */
+.reminders-list {
+    max-height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.reminder-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #F9F3FF;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.reminder-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(107, 94, 205, 0.1);
+}
+
+.reminder-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #6B5ECD;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.reminder-content {
+    flex-grow: 1;
+}
+
+.reminder-content h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.reminder-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.reminder-content p:first-of-type {
+    font-weight: 500;
+    color: #6B5ECD;
+}
+
+.reminder-actions {
+    display: flex;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+.btn-edit-reminder, 
+.btn-delete-reminder {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: #6B5ECD;
+    transition: all 0.3s ease;
+}
+
+.btn-edit-reminder:hover {
+    background-color: #6B5ECD;
+    color: white;
+}
+
+.btn-delete-reminder {
+    color: #ff6b6b;
+}
+
+.btn-delete-reminder:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.add-reminder {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+/* Messages Modal Styles */
+.messages-list {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.message-item {
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border-left: 4px solid #6B5ECD;
+    transition: all 0.3s ease;
+}
+
+.message-item.unread {
+    background-color: #F5F8FF;
+    border-left: 4px solid #FF6B6B;
+}
+
+.message-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(107, 94, 205, 0.1);
+}
+
+.message-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    flex-shrink: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #6B5ECD;
+}
+
+.message-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.message-content {
+    flex-grow: 1;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.message-header h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.message-time {
+    font-size: 12px;
+    color: #999;
+}
+
+.message-content p {
+    margin: 0 0 10px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.message-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-reply {
+    padding: 6px 12px;
+    background-color: #6B5ECD;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-reply:hover {
+    background-color: #5a4fb8;
+}
+
+.btn-delete {
+    padding: 6px 12px;
+    background-color: transparent;
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.messages-empty {
+    text-align: center;
+    padding: 30px;
+}
+
+.empty-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #F9F3FF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    color: #6B5ECD;
+    font-size: 24px;
+}
+
+.messages-empty h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.messages-empty p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Delete Confirmation Styles */
+.delete-confirmation {
+    text-align: center;
+    padding: 20px;
+}
+
+.delete-confirmation p {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.confirmation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-danger {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn-danger:hover {
+    background-color: #e05555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .reminder-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .reminder-icon {
+        margin-bottom: 10px;
+    }
+    
+    .reminder-actions {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .message-item {
+        flex-direction: column;
+    }
+    
+    .message-avatar {
+        margin-bottom: 10px;
+    }
+    
+    .message-actions {
+        justify-content: flex-end;
     }
 }

@@ -8,16 +8,22 @@
     <link rel="stylesheet" href="NavBar.css">
     <link rel="stylesheet" href="Homepage.css">
     
-
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div id="navbar"></div>
-    <script>
-        fetch("NavBar.html")
-            .then(response => response.text())
-            .then(data => document.getElementById("navbar").innerHTML = data);
-    </script>
+<script>
+    fetch("NavBar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+            // Manually trigger the highlighting setup
+            const event = new Event('navbar-loaded');
+            document.dispatchEvent(event);
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+</script>
 
     <div class="main-container">
         <!-- Main Content -->
@@ -38,7 +44,7 @@
                 <section class="profile-card">
                     <div class="profile-header-content">
                         <div class="profile-image">
-                            <img src="/ProjectManagement/pets/user (1).png" alt="Emma Thompson">
+                            <img src="/pets/user (1).png" alt="Emma Thompson">
                         </div>
                         <div class="profile-info">
                             <h2>Sarah Thompson <button class="edit-btn"><i class="fas fa-edit"></i></button></h2>
@@ -101,10 +107,10 @@
                         <div class="card-number">236 •••• •••• 265</div>
                     </div>
                     <div class="payment-methods">
-                        <img src="/ProjectManagement/pets/fawry.png" alt="Fawry">
-                        <img src="/ProjectManagement/pets/Apple_Pay_logo.svg.png" alt="Apple Pay">
-                        <img src="/ProjectManagement/pets/MasterCard_Logo.svg.png" alt="Mastercard">
-                        <img src="/ProjectManagement/pets/Visa_Inc._logo.svg.png" alt="Visa">
+                        <img src="/pets/fawry.png" alt="Fawry">
+                        <img src="/pets/Apple_Pay_logo.svg.png" alt="Apple Pay">
+                        <img src="/pets/MasterCard_Logo.svg.png" alt="Mastercard">
+                        <img src="/pets/Visa_Inc._logo.svg.png" alt="Visa">
                     </div>
                 </section>
 
