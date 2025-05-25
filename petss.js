@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     const infoBoxes = document.querySelectorAll(".info-box");
 
@@ -94,7 +95,7 @@ const petDetails = {
         description: "Luna is a playful and affectionate Persian cat with beautiful blue eyes. She loves cuddles and playing with toys. She's great with children and other pets.",
         personality: ["Playful", "Affectionate", "Curious"],
         needs: ["Regular grooming", "Indoor home", "Lots of love"],
-        image: "/ProjectManagement/pets/cat-home.jpg"
+        image: "/pets/cat-home.jpg"
     },
     "Fluffy": {
         name: "Fluffy",
@@ -105,7 +106,7 @@ const petDetails = {
         description: "Fluffy is an adorable Holland Lop with floppy ears and a sweet personality. He's litter trained and enjoys hopping around and exploring new environments.",
         personality: ["Gentle", "Curious", "Friendly"],
         needs: ["Hay daily", "Room to hop", "Chew toys"],
-        image: "/ProjectManagement/pets/cat-home2.webp"
+        image: "/pets/cat-home2.webp"
     },
     "Rio": {
         name: "Rio",
@@ -116,7 +117,41 @@ const petDetails = {
         description: "Rio is a vibrant and intelligent Macaw with beautiful plumage. He knows a few words and loves to interact with people. He's very social and needs daily attention.",
         personality: ["Intelligent", "Social", "Vocal"],
         needs: ["Large cage", "Daily interaction", "Mental stimulation"],
-        image: "/ProjectManagement/pets/cat-home3.jpg"
+        image: "/pets/cat-home3.jpg"
+    },
+    "Oreo": {
+        name: "Oreo",
+        breed: "Macaw Parrot",
+        age: "3 years old",
+        gender: "Male",
+        location: "Bird Sanctuary",
+        description: "Rio is a vibrant and intelligent Macaw with beautiful plumage. He knows a few words and loves to interact with people. He's very social and needs daily attention.",
+        personality: ["Intelligent", "Social", "Vocal"],
+        needs: ["Large cage", "Daily interaction", "Mental stimulation"],
+        image: "/pets/dog-home.jpg"
+    },
+      "Tonny": {
+        name: "Tonny",
+        breed: "Bunny Haven",
+        age: "6 months old",
+        gender: "Male",
+        location: " Bunny Haven",
+        description: "Rio is a vibrant and intelligent Macaw with beautiful plumage. He knows a few words and loves to interact with people. He's very social and needs daily attention.",
+        personality: ["Intelligent", "Social", "Vocal"],
+        needs: ["Large cage", "Daily interaction", "Mental stimulation"],
+        image: "/pets/dog-home1.jpg"
+    },
+
+ "Oscar": {
+        name: "Oscar",
+        breed: " Labrador",
+        age: "3 years old",
+        gender: "Male",
+        location: " Bird Sanctuary",
+        description: "Rio is a vibrant and intelligent Macaw with beautiful plumage. He knows a few words and loves to interact with people. He's very social and needs daily attention.",
+        personality: ["Intelligent", "Social", "Vocal"],
+        needs: ["Large cage", "Daily interaction", "Mental stimulation"],
+        image: "/pets/dog-home2.jpg"
     }
 };
 

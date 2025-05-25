@@ -1,15 +1,23 @@
-
-
 header {
     background: #f6f3ea;
-    display: flex;
     position: fixed;
-    z-index: 9999999999;
-    justify-content: space-between;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    padding: 15px 0; /* Changed from 50px to 0 for side padding */
+    border-bottom: 1px solid rgb(210, 210, 210);
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
     align-items: center;
-    width: 95%;
-    padding: 15px 50px;
-   border-bottom:1px solid rgb(210, 210, 210);
+    width: 100%;
+    max-width: 1200px; /* Adjust this to match your content width */
+    margin: 0 auto;
+    padding: 0 20px; /* Add horizontal padding here instead */
 }
 
 .logo {
@@ -21,12 +29,6 @@ header {
 
 .highlight {
     color: #7a3af9;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
 }
 
 nav ul {
@@ -63,7 +65,7 @@ nav ul li a {
     margin-left: -1.5em;
 }
 nav ul li a.active {
-    background: #9063cd;  /* Same color as "Contact us" button */
+    background: #9063cd;
     color: white;
     padding: 8px 16px;
     border-radius: 20px;
@@ -73,7 +75,7 @@ nav ul li a.active {
 }
 
 nav ul li a.active:hover {
-    background: #7a50b6; /* Darker shade on hover */
+    background: #7a50b6;
 }
 
 

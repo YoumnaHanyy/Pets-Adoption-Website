@@ -203,3 +203,98 @@ document.addEventListener("DOMContentLoaded", function() {
        
     });
 });
+// Grooming Modal Functionality
+document.addEventListener("DOMContentLoaded", function() {
+    const groomingModal = document.getElementById("groomingModal");
+    const groomingButtons = document.querySelectorAll(".try-free-button, .category-name"); // Both the button and category name can trigger
+    const closeGroomingModal = document.querySelector(".close-grooming-modal");
+    const groomingForm = document.getElementById("groomingForm");
+    const groomingFormMessage = document.getElementById("groomingFormMessage");
+    
+    // Set minimum date to today for grooming
+    const groomingDateInput = document.getElementById("groomingDate");
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    const todayFormatted = `${yyyy}-${mm}-${dd}`;
+    groomingDateInput.min = todayFormatted;
+    
+    // Open modal when grooming button is clicked
+    groomingButtons.forEach(button => {
+        button.addEventListener("click", function(e) {
+            e.preventDefault();
+            groomingModal.classList.add("show");
+            document.body.style.overflow = "hidden";
+        });
+    });
+    
+    // Close modal when X is clicked
+    closeGroomingModal.addEventListener("click", function() {
+        closeGroomingModalFunction();
+    });
+    
+    // Close modal when clicking outside
+    window.addEventListener("click", function(event) {
+        if (event.target === groomingModal) {
+            closeGroomingModalFunction();
+        }
+    });
+    
+    // Close with Escape key
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape" && groomingModal.classList.contains("show")) {
+            closeGroomingModalFunction();
+        }
+    });
+    
+    function closeGroomingModalFunction() {
+        groomingModal.classList.remove("show");
+        setTimeout(() => {
+            document.body.style.overflow = "";
+        }, 300);
+    }
+    
+    // Form submission
+    groomingForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        // Form validation
+        const petName = document.getElementById("petName").value.trim();
+        const petType = document.getElementById("petType").value;
+        const groomingDate = document.getElementById("groomingDate").value;
+        const groomingTime = document.getElementById("groomingTime").value;
+        const groomingService = document.getElementById("groomingService").value;
+        
+        if (!petName || !petType || !groomingDate || !groomingTime || !groomingService) {
+            groomingFormMessage.textContent = "Please fill in all required fields.";
+            groomingFormMessage.className = "form-message error";
+            return;
+        }
+        
+        // Display success message
+        groomingFormMessage.textContent = `Grooming appointment booked for ${petName} on ${groomingDate} at ${groomingTime}!`;
+        groomingFormMessage.className = "form-message success";
+        
+        // Reset form after 3 seconds and close modal
+        setTimeout(() => {
+            groomingForm.reset();
+            groomingFormMessage.textContent = "";
+            groomingFormMessage.className = "form-message";
+            closeGroomingModalFunction();
+        }, 3000);
+        
+        // Data to send to server
+        const formData = {
+            petName: petName,
+            petType: petType,
+            groomingDate: groomingDate,
+            groomingTime: groomingTime,
+            groomingService: groomingService,
+            specialInstructions: document.getElementById("specialInstructions").value,
+            hasSpecialNeeds: document.getElementById("hasSpecialNeeds").checked
+        };
+        
+        console.log("Grooming Form Data:", formData);
+    });
+});
